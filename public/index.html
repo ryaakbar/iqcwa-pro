@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQC WA Generator Pro — by ryaakbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- MARQUEE -->
+<div class="marquee-top">
+    <div class="marquee-content">
+        IQC WA GENERATOR PRO <span class="marquee-dot">◆</span>
+        FAKE WHATSAPP MAKER <span class="marquee-dot">◆</span>
+        IPHONE STYLE <span class="marquee-dot">◆</span>
+        FREE NO WATERMARK <span class="marquee-dot">◆</span>
+        POWERED BY RYAAKBAR <span class="marquee-dot">◆</span>
+        INSTANT DOWNLOAD <span class="marquee-dot">◆</span>
+        IQC WA GENERATOR PRO <span class="marquee-dot">◆</span>
+        FAKE WHATSAPP MAKER <span class="marquee-dot">◆</span>
+        IPHONE STYLE <span class="marquee-dot">◆</span>
+        FREE NO WATERMARK <span class="marquee-dot">◆</span>
+        POWERED BY RYAAKBAR <span class="marquee-dot">◆</span>
+        INSTANT DOWNLOAD <span class="marquee-dot">◆</span>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="brand-container">
+        <div class="brand-icon-wrap">
+            <i class="fa-brands fa-whatsapp" style="color:white;font-size:1.1rem"></i>
+        </div>
+        <div class="brand-glitch">IQC<span>WA</span></div>
+    </div>
+    <div class="nav-right">
+        <div class="status-pill">
+            <div class="dot-live"></div>
+            ONLINE
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN -->
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero-header reveal">
+        <div class="hero-badge">📱 IQC WA Generator Pro — Free</div>
+        <h1 class="hero-title">Fake WA <span class="grad-text">iPhone,</span><br>Sekarang.</h1>
+        <p class="hero-sub">Generate screenshot WhatsApp gaya iPhone dengan status bar custom. No watermark, instant download.</p>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="glass-card reveal delay-1" id="formCard">
+        <div class="card-header">
+            <div class="card-header-icon">
+                <i class="fa-brands fa-whatsapp" style="color:white"></i>
+            </div>
+            <div>
+                <div class="header-label">⚙️ WA Customizer</div>
+                <div class="header-title">Atur detail screenshot kamu</div>
+            </div>
+        </div>
+
+        <div class="card-body">
+
+            <!-- MESSAGE TEXT -->
+            <div class="input-group">
+                <label class="input-label">
+                    <i class="fa-solid fa-message" style="margin-right:5px;color:var(--blue-400)"></i>
+                    Isi Pesan WA
+                </label>
+                <div class="textarea-icon-wrap">
+                    <span class="input-icon">
+                        <i class="fa-solid fa-pen" style="font-size:13px"></i>
+                    </span>
+                    <textarea id="messageText" class="cyber-textarea"
+                        placeholder="Tulis isi pesan WhatsApp kamu di sini..."
+                        oninput="updateCharCount(this,'msgCount')" rows="4"></textarea>
+                </div>
+                <div class="char-count" id="msgCount">0 karakter</div>
+            </div>
+
+            <div class="form-divider">
+                <span class="form-divider-label">Status Bar iPhone</span>
+            </div>
+
+            <!-- TIME -->
+            <div class="input-group">
+                <label class="input-label">
+                    <i class="fa-solid fa-clock" style="margin-right:5px;color:var(--blue-400)"></i>
+                    Jam
+                </label>
+                <div class="time-picker-wrap">
+                    <span class="time-icon">
+                        <i class="fa-solid fa-clock" style="font-size:13px"></i>
+                    </span>
+                    <input type="time" id="timeInput" class="time-input" value="09:41">
+                    <button class="time-now-btn" onclick="setTimeNow()">
+                        <i class="fa-solid fa-rotate"></i> Sekarang
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARRIER NAME -->
+            <div class="input-group">
+                <label class="input-label">
+                    <i class="fa-solid fa-signal" style="margin-right:5px;color:var(--blue-400)"></i>
+                    Provider / Kartu SIM
+                </label>
+                <div class="input-wrapper">
+                    <span class="input-icon">
+                        <i class="fa-solid fa-sim-card" style="font-size:13px"></i>
+                    </span>
+                    <input type="text" id="carrierName" class="cyber-input"
+                        placeholder="Nama provider..." value="INDOSAT OOREDOO"
+                        list="carrierSuggestions" autocomplete="off">
+                </div>
+                <datalist id="carrierSuggestions">
+                    <option value="INDOSAT OOREDOO">
+                    <option value="Telkomsel">
+                    <option value="XL">
+                    <option value="Smartfren">
+                    <option value="Tri (3)">
+                    <option value="AXIS">
+                    <option value="By.U">
+                    <option value="AT&T">
+                    <option value="T-Mobile">
+                    <option value="Verizon">
+                    <option value="Vodafone">
+                </datalist>
+                <!-- Quick picks -->
+                <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+                    <button class="carrier-chip" onclick="setCarrier('Telkomsel')">Telkomsel</button>
+                    <button class="carrier-chip" onclick="setCarrier('INDOSAT OOREDOO')">Indosat</button>
+                    <button class="carrier-chip" onclick="setCarrier('XL')">XL</button>
+                    <button class="carrier-chip" onclick="setCarrier('Smartfren')">Smartfren</button>
+                    <button class="carrier-chip" onclick="setCarrier('Tri (3)')">Tri</button>
+                    <button class="carrier-chip" onclick="setCarrier('AXIS')">AXIS</button>
+                </div>
+            </div>
+
+            <!-- BATTERY & SIGNAL (2 col) -->
+            <div class="input-grid-2">
+
+                <!-- BATTERY -->
+                <div class="input-group" style="margin-bottom:0">
+                    <label class="input-label">
+                        <i class="fa-solid fa-battery-three-quarters" style="margin-right:5px;color:var(--blue-400)"></i>
+                        Baterai
+                    </label>
+                    <div class="slider-wrap">
+                        <input type="range" id="batterySlider" class="cyber-slider"
+                            min="1" max="100" value="80"
+                            oninput="updateBattery(this)">
+                        <div class="slider-val" id="batteryVal">80%</div>
+                    </div>
+                    <!-- Battery quick presets -->
+                    <div style="display:flex;gap:5px;margin-top:8px">
+                        <button class="preset-btn" onclick="setBattery(20)">20%</button>
+                        <button class="preset-btn" onclick="setBattery(50)">50%</button>
+                        <button class="preset-btn" onclick="setBattery(80)">80%</button>
+                        <button class="preset-btn" onclick="setBattery(100)">100%</button>
+                    </div>
+                </div>
+
+                <!-- SIGNAL -->
+                <div class="input-group" style="margin-bottom:0">
+                    <label class="input-label">
+                        <i class="fa-solid fa-wifi" style="margin-right:5px;color:var(--blue-400)"></i>
+                        Sinyal
+                    </label>
+                    <div class="signal-btns" id="signalBtns">
+                        <button class="signal-btn" onclick="setSignal(1,this)">
+                            <div class="signal-bars">
+                                <div class="signal-bar" style="height:4px"></div>
+                                <div class="signal-bar" style="height:7px;opacity:.3"></div>
+                                <div class="signal-bar" style="height:10px;opacity:.3"></div>
+                                <div class="signal-bar" style="height:14px;opacity:.3"></div>
+                            </div>
+                            <span>1</span>
+                        </button>
+                        <button class="signal-btn" onclick="setSignal(2,this)">
+                            <div class="signal-bars">
+                                <div class="signal-bar" style="height:4px"></div>
+                                <div class="signal-bar" style="height:7px"></div>
+                                <div class="signal-bar" style="height:10px;opacity:.3"></div>
+                                <div class="signal-bar" style="height:14px;opacity:.3"></div>
+                            </div>
+                            <span>2</span>
+                        </button>
+                        <button class="signal-btn" onclick="setSignal(3,this)">
+                            <div class="signal-bars">
+                                <div class="signal-bar" style="height:4px"></div>
+                                <div class="signal-bar" style="height:7px"></div>
+                                <div class="signal-bar" style="height:10px"></div>
+                                <div class="signal-bar" style="height:14px;opacity:.3"></div>
+                            </div>
+                            <span>3</span>
+                        </button>
+                        <button class="signal-btn active" onclick="setSignal(4,this)">
+                            <div class="signal-bars">
+                                <div class="signal-bar" style="height:4px"></div>
+                                <div class="signal-bar" style="height:7px"></div>
+                                <div class="signal-bar" style="height:10px"></div>
+                                <div class="signal-bar" style="height:14px"></div>
+                            </div>
+                            <span>4</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom:20px"></div>
+
+            <!-- SUBMIT -->
+            <button id="generateBtn" class="cyber-button" onclick="generateWA()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Generate Screenshot</span>
+                <span class="btn-arrow">→</span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" class="glass-card loading-card hidden">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Generating screenshot...</div>
+        <div class="loader-progress"><div class="loader-bar"></div></div>
+    </div>
+
+    <!-- ERROR -->
+    <div id="errorCard" class="glass-card error-card hidden">
+        <div class="error-icon">⚠️</div>
+        <div>
+            <div class="error-title">Gagal Generate</div>
+            <div class="error-body" id="errorText"></div>
+        </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="resultCard" class="glass-card result-card hidden">
+        <div class="result-header">
+            <div class="result-type">
+                <div class="result-type-icon">📱</div>
+                WA Screenshot
+            </div>
+            <div class="result-badge"><span>●</span> READY</div>
+        </div>
+        <div class="result-body">
+            <div class="result-img-wrap">
+                <img id="resultImg" src="" alt="Generated WA">
+            </div>
+            <div class="action-row">
+                <button class="btn-action btn-download" onclick="downloadWA()">
+                    <i class="fa-solid fa-download"></i> Download PNG
+                </button>
+                <button class="btn-action btn-copy" id="copyBtn" onclick="copyWAImg()">
+                    <i class="fa-solid fa-copy"></i> Copy Image
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="sann-footer reveal">
+        <div class="footer-divider"></div>
+        <p class="footer-text">Powered by</p>
+        <p class="footer-brand">RYAAKBAR</p>
+        <p class="footer-sub">Free forever · No watermark · No cap</p>
+    </footer>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- SCROLL BUTTONS -->
+<div class="scroll-btns" id="scrollBtns">
+    <button class="scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <button class="scroll-btn" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
