@@ -1,0 +1,9 @@
+{
+  "name": "iqc-wa-generator",
+  "version": "1.0.0",
+  "description": "IQC WA Generator Pro — by ryaakbar",
+  "type": "module",
+  "engines": { "node": ">=18.0.0" },
+  "author": "ryaakbar",
+  "license": "MIT"
+}
